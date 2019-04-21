@@ -20,7 +20,8 @@ A visualizer made with the SDL2 helps us to understand what's happening. Use the
 Heat map.
 
 ## Exemple
-<img width="1199" alt="Screen Shot 2019-04-21 at 7 02 30 PM" src="https://user-images.githubusercontent.com/44093777/56473837-14833e80-6469-11e9-8d97-a32d01c256e3.png">
+map02:
+<img width="1196" alt="Screen Shot 2019-04-21 at 7 22 42 PM" src="https://user-images.githubusercontent.com/44093777/56473995-fcacba00-646a-11e9-9c52-5494bd3c15e3.png">
 
 <img width="1194" alt="Screen Shot 2019-04-21 at 7 13 42 PM" src="https://user-images.githubusercontent.com/44093777/56473895-ab4ffb00-6469-11e9-8f83-9888f7360556.png">
 
