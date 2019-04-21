@@ -6,7 +6,7 @@
 /*   By: lsaidi <lahcen.saidi88@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 16:17:19 by lsaidi            #+#    #+#             */
-/*   Updated: 2019/04/20 13:08:31 by lsaidi           ###   ########.fr       */
+/*   Updated: 2019/04/21 18:34:01 by lsaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct	s_visu
 	SDL_Surface		*winer;
 	SDL_Surface		*vs;
 	SDL_Surface		*fille_name;
+	SDL_Surface		*name_bar;
 	TTF_Font		*police;
 	SDL_Color		color_text;
 	SDL_Color		color_textp1;
@@ -46,6 +47,7 @@ typedef struct	s_visu
 	SDL_Color		color_percent1;
 	SDL_Color		color_percent2;
 	SDL_Color		color_filler;
+	SDL_Color		color_name_bar;
 	SDL_Event		event;
 	SDL_Rect		r;
 	SDL_Rect		ret_r;
@@ -57,6 +59,8 @@ typedef struct	s_visu
 	SDL_Rect		text_percent2;
 	SDL_Rect		text_winer;
 	SDL_Rect		text_filler;
+	SDL_Rect		text_name_bar;
+	SDL_Rect		display;
 	int				scor_p1;
 	int				scor_p2;
 	int				scor_point;
@@ -108,5 +112,8 @@ void			start_vis(t_visu *vis);
 void			show(t_visu *vis);
 void			show_winer(t_visu *vis);
 void			text_filler(t_visu *vis);
+void			background(t_visu *vis);
+void			winer_box(t_visu *vis);
+void			end_name(t_visu *vis);
 
 #endif

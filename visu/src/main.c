@@ -6,7 +6,7 @@
 /*   By: lsaidi <lahcen.saidi88@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 11:19:05 by lsaidi            #+#    #+#             */
-/*   Updated: 2019/04/20 13:09:24 by lsaidi           ###   ########.fr       */
+/*   Updated: 2019/04/21 13:26:06 by lsaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	manager_event(t_visu *vis)
 	while (loop)
 	{
 		SDL_PollEvent(&vis->event);
+		if (vis->event.key.keysym.sym == SDLK_ESCAPE)
+			loop = 0;
 		if (vis->event.type == SDL_QUIT)
 			loop = 0;
 	}
@@ -56,6 +58,7 @@ int		main(void)
 	get_platinfo(&vis);
 	catlc_init(&vis);
 	init_tool(&vis);
+	background(&vis);
 	init_color_text(&vis);
 	show(&vis);
 	vis.divis = vis.p_h * vis.p_w;

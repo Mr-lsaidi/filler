@@ -6,7 +6,7 @@
 /*   By: lsaidi <lahcen.saidi88@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 19:23:29 by lsaidi            #+#    #+#             */
-/*   Updated: 2019/04/20 13:09:40 by lsaidi           ###   ########.fr       */
+/*   Updated: 2019/04/21 18:41:52 by lsaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	start_vis(t_visu *vis)
 	while (1)
 	{
 		vis->r.x = 150;
-		vis->r.y = 150;
+		vis->r.y = 140;
 		vis->r.w = vis->hw;
 		vis->r.h = vis->hw;
 		get_plat(vis);
@@ -66,8 +66,23 @@ void	start_vis(t_visu *vis)
 	}
 }
 
+void	end_name(t_visu *vis)
+{
+	vis->color_name_bar.r = 255;
+	vis->color_name_bar.g = 250;
+	vis->color_name_bar.b = 250;
+	vis->text_name_bar.x = 420;
+	vis->text_name_bar.y = vis->width - vis->ret_higth - 60;
+	vis->police = TTF_OpenFont("visu/ttf_fonts/KGBrokenVesselsSketch.ttf", 35);
+	vis->name_bar = TTF_RenderText_Blended(vis->police, "win percentage %",
+	vis->color_name_bar);
+	SDL_BlitSurface(vis->name_bar, NULL, vis->surf, &vis->text_name_bar);
+	SDL_FreeSurface(vis->name_bar);
+}
+
 void	end_vis(t_visu *vis)
 {
+	winer_box(vis);
 	vis->scor1 = ((((vis->scor_p1 * 100) / vis->divis) * 890) / 100);
 	vis->scor2 = ((((vis->scor_p2 * 100) / vis->divis) * 890) / 100);
 	vis->ret_r.x = 150;
@@ -83,9 +98,11 @@ void	end_vis(t_visu *vis)
 	SDL_FillRect(vis->surf, &vis->ret_r2, SDL_MapRGB(vis->surf->format,
 	150, 97, 107));
 	vis->percent1 = TTF_RenderText_Blended(vis->police,
-	ft_strjoin(ft_itoa(vis->scor1), " %"), vis->color_percent1);
+	ft_strjoin(ft_itoa((vis->scor1 * 100) / 890), " %"), vis->color_percent1);
 	SDL_BlitSurface(vis->percent1, NULL, vis->surf, &vis->text_percent1);
+	SDL_FreeSurface(vis->percent1);
 	vis->percent2 = TTF_RenderText_Blended(vis->police,
-	ft_strjoin(ft_itoa(vis->scor2), " %"), vis->color_percent2);
+	ft_strjoin(ft_itoa((vis->scor2 * 100) / 890), " %"), vis->color_percent2);
 	SDL_BlitSurface(vis->percent2, NULL, vis->surf, &vis->text_percent2);
+	SDL_FreeSurface(vis->percent2);
 }

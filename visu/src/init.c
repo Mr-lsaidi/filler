@@ -6,7 +6,7 @@
 /*   By: lsaidi <lahcen.saidi88@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 19:17:34 by lsaidi            #+#    #+#             */
-/*   Updated: 2019/04/20 13:09:33 by lsaidi           ###   ########.fr       */
+/*   Updated: 2019/04/21 17:59:35 by lsaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	catlc_init(t_visu *vis)
 		vis->hw = 800 / vis->p_w;
 		vis->delay = 1;
 		vis->width = 1250;
-		vis->higth = 990;
+		vis->higth = 1000;
 		vis->ret_higth = 150;
 	}
 }
