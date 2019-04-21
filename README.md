@@ -23,3 +23,13 @@ On the begining of each turn, a Heat Map is created. It represents the Map of th
 
 ## Exemple
 <img width="1199" alt="Screen Shot 2019-04-21 at 7 02 30 PM" src="https://user-images.githubusercontent.com/44093777/56473837-14833e80-6469-11e9-8d97-a32d01c256e3.png">
+
+
+
+
+# Prerequisites
+`brew install SDL2`
+
+`brew install SDL2_ttf`
+
+If brew isn't installed, compile the project with the sources (don't forget to change the Makefile).
