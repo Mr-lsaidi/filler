@@ -33,10 +33,10 @@ Heat map.
 If brew isn't installed, compile the project with the sources (don't forget to change the Makefile).
 
 # Installation of the algorithm
-cd work; make
+`cd work ; make`
 
 # Installation of the visualizer
-cd visu; make
+`cd visu ; make`
 
 # Run
 Standard mode :
