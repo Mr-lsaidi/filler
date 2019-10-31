@@ -17,7 +17,7 @@ On big maps it's difficult to see what is really happening.
 A visualizer made with the SDL2 helps us to understand what's happening. Use the left and right arrows of your keyboard to see it.
 
 # Algorithm
-Heat map.
+Tracking with Heat map.
 
 ## Exemple
 map00:
